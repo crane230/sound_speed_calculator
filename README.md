@@ -1,2 +1,2 @@
 # my_caculator
-This is my first repository  when I am a newcomer to github. In this repository I will try something simple.
+《大学物理实验》利用逐差法与相位法实现声速的测定
