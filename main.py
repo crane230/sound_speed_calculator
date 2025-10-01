@@ -117,7 +117,9 @@ if Button is True:
 
         A_lower_format=cac.return_num(A_lower,4)
         A_upper_format=cac.return_num(A_upper,4)
-        st.latex(r"\overline \lambda = \frac{1}{6} \sum_{i=1}^{6} \lambda _{i} = %.2f \qquad\qquad S_{\lambda} = \sqrt{\frac{\sum ( \lambda _{i} - \overline \lambda )^2}{6-1}} = %.2f "%(A_ave,S_A))
+        A_ave_format=cac.return_num(A_ave,4)
+        S_A_format=cac.return_num(S_A,4)
+        st.latex(r"\overline \lambda = \frac{1}{6} \sum_{i=1}^{6} \lambda _{i} = %s \qquad\qquad S_{\lambda} = \sqrt{\frac{\sum ( \lambda _{i} - \overline \lambda )^2}{6-1}} = %s "%(Decimal(A_ave_format[0]+'e'+str(A_ave_format[1])),Decimal(S_A_format[0]+'e'+str(S_A_format[1]))))
         st.latex(r"\lambda = \overline \lambda \pm S_{\lambda} = %s 或 %s"%(Decimal(A_lower_format[0]+'e'+str(A_lower_format[1])),Decimal(A_upper_format[0]+'e'+str(A_upper_format[1]))))
 
         st.divider()
@@ -172,7 +174,7 @@ if Button is True:
 
 
         st.divider()
-        st.write("恭喜你发现了彩蛋！看到这行文字，说明你已经正确输入了程序运行的所有必要参数并完成了一次成功的计算！本程序由CraneMurmur开发，感谢您的支持，如有建议，请通过3930214985@qq.com反馈。")  # 如果为True，显示彩蛋
+        st.write("恭喜你发现了彩蛋！看到这行文字，说明你已经正确输入了程序运行的所有必要参数并完成了一次成功的计算！本程序由CraneMurmur开发，感谢您的支持，如有建议，请通过3930214985@qq.com反馈。如果您对该作品满意，请在https://github.com/crane230/sound_speed_calculator/tree/master 为我的项目点击“star”，您的支持是我持续更新的动力！")  # 如果为True，显示彩蛋
     except :
         st.markdown("<h2 style='color: red;'>请正确输入！！！</h2>",unsafe_allow_html=True)
 
